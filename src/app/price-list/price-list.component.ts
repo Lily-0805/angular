@@ -1,6 +1,7 @@
 import { Component, OnInit,EventEmitter } from '@angular/core';
 import { AllServiceService } from '../all-service.service';
 import { Material } from '../material'
+import { Price } from '../price'
 
 @Component({
   selector: 'app-price-list',
@@ -28,12 +29,15 @@ export class PriceListComponent implements OnInit {
 
   materialList:Material[];
 
+  priceList:Price[];
+
 
 
   constructor(private allService : AllServiceService) { }
 
   ngOnInit() {
     this.getMaterialList();
+    this.getPriceList11();
   }
 
   //显示品种
@@ -67,7 +71,6 @@ export class PriceListComponent implements OnInit {
     }
 
 
-    //this.getNewsList00()
   }
 
 
@@ -90,6 +93,11 @@ export class PriceListComponent implements OnInit {
   //删除牌号
   deleteMaterial(materialList:Material):void{
     this.materialList = this.materialList.filter(m => m !== materialList);
+  }
+
+  getPriceList11():void{
+    this.allService.getNewsList()
+      .subscribe(data => this.newsList = data['newsList00']);
   }
 
 }

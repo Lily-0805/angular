@@ -1,0 +1,11 @@
+
+
+
+
+.hq-bottom-wrapper{ position: fixed; left: 0; bottom: 0; width: 100%; height: 50px; background: #f6f6f6; border-top: 1px solid #d6d6d6; }
+.hq-bottom-wrapper a{ padding-top: 30px; float: left; width: 50%; height: 20px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/bottom-icon.png) no-repeat; text-align: center; color: #999; }
+.hq-bottom-wrapper a.hover{ color: #08d; }
+.hq-bottom-wrapper a.icon01{ background-position: center 8px; }
+.hq-bottom-wrapper a.icon02{ background-position: center -42px; }
+.hq-bottom-wrapper a.icon01.hover{ background-position: center -192px; }
+.hq-bottom-wrapper a.icon02.hover{ background-position: center -242px; }

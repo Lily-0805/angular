@@ -80,7 +80,16 @@
       </tr>
       </thead>
       <tbody>
-
+        <tr *ngFor="let price of priceList" data-uri="/center/wap_price_detail?id={{price.id}}" data-catename="{{price.cateName}}">
+          <td class="nobd"><b>{{price.material}}</b></td>
+          <td class="nobd">{{price.salesRegion}}</td>
+          <td rowspan="2" class="price-s">{{price.price}}</td>
+          <td rowspan="2">{{price.vary}}</td>
+          <td rowspan="2">{{price.modifyTime}}</td>
+        </tr>
+        <tr *ngFor="let price of priceList" data-uri="/center/wap_price_detail?id={{price.id}}">
+          <td colspan="2" class="tr2">{{price.cateName}} {{price.manufacturer}}</td>
+        </tr>
       </tbody>
     </table>
     <div class="no-more" style="display: none;"><i></i>&nbsp;&nbsp;&nbsp;&nbsp;没有更多了</div>

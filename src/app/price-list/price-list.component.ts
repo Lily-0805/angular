@@ -97,7 +97,7 @@ export class PriceListComponent implements OnInit {
 
   getPriceList11():void{
     this.allService.getNewsList()
-      .subscribe(data => this.newsList = data['newsList00']);
+      .subscribe(data => this.priceList = data['priceList11']);
   }
 
 }

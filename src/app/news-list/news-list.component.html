@@ -1,0 +1,28 @@
+<div class="news-list-wrapper">
+  <div class="search">
+    <a class="search-input" href="/center/wapSearch">输入关键词，如 品种/牌号/厂家</a>
+    <div class="channel">
+      <span class="now-channel" (click)="showmoreCateType()" [class.open]="moreCateType">{{cateTypeName}}</span>
+      <div class="more-channel" *ngIf="moreCateType">
+        <p *ngFor="let catetype of cateTypes" [class.on]="cateType === catetype.id" (click)="selectCateType(catetype)">
+          <span>{{catetype.name}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="cate-list">
+    <p>
+      <span *ngFor="let cate of cates" data-id="{{cate.id}}" [class.on]="cateId === cate.id" (click)="selectCate(cate)">{{cate.name}}</span>
+    </p>
+  </div>
+  <div class="news-list-content">
+    <input type="hidden" class="pageNo" value="1" />
+    <ul>
+      <li *ngFor="let newslist of newsList" [class.top]="newslist.isTop">
+        <p class="title"><a routerLink="/news/{{newslist.id}}">{{newslist.title}}</a></p>
+        <p class="p1"><span class="time">{{newslist.pubTime}}</span><span class="see">{{newslist.viewTimes}}</span></p>
+      </li>
+    </ul>
+  </div>
+
+</div>

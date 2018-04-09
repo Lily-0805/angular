@@ -1,0 +1,100 @@
+<div class="price-wrapper">
+  <div class="search">
+    <a class="search-input" href="/center/wap_search_price_list">输入牌号关键词，如 7024</a>
+    <div class="channel">
+      <span class="now-channel" (click)="showmoreCateType()" [class.open]="moreCateType">{{cateTypeName}}</span>
+      <div class="more-channel" *ngIf="moreCateType">
+        <p *ngFor="let catetype of cateTypes" [class.on]="cateType === catetype.id" (click)="selectCateType(catetype)">
+          <span>{{catetype.name}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <div class="text" [class.up]="vary>0" [class.down]="vary<0">
+      <p class="p1">{{price}}&nbsp;<span class="num">{{vary}}</span></p>
+      <p class="p2"><span class="time">更新时间：{{modifyTime}}</span>{{cateTypeName}}成交指数<span class="num">{{indexPrice}}</span></p>
+    </div>
+
+    <div class="chart">
+      <div class="chart-title">
+        {{cateTypeName}}成交指数
+        <span data-days="90">近三个月</span>
+        <span data-days="30">近一个月</span>
+        <span data-days="7" class="on">近七天</span>
+      </div>
+      <div class="point-target" style="display: none;">
+        <div>时间：<span class="time"></span></div>
+        <div>指数：<span class="num"></span></div>
+        <div>涨跌：<span class="vary"></span></div>
+      </div>
+      <div class="point-text">手指移至下方曲线图上，可查具体每日数值</div>
+      <div id="container"></div>
+    </div>
+  </div>
+
+  <div class="care-text" *ngIf="isFollow==0">
+
+    <a href="javascript:;" class="go-care s1">立即关注</a>关注<span class="s">暂未关注牌号</span>
+  </div>
+  <div class="care-text" *ngIf="isFollow==1">
+
+    <a href="javascript:;" class="go-edit s1" (click)="showEditMaterialMask(true)">牌号管理</a>关注<span class="s">已关注</span>
+
+  </div>
+  <p class="test-text"></p>
+
+  <div class="material-mask" *ngIf="editMaterialMaskFlag" (click)="showEditMaterialMask(false)"></div>
+  <div class="edit-material" *ngIf="editMaterialMaskFlag">
+    <p class="p1"><a href="javascript:;" class="close" (click)="showEditMaterialMask(false)"></a>牌号管理</p>
+    <p class="p2">
+      <a href="javascript:;" class="edit" (click)="showEditMaterial(false)" *ngIf="editMaterialFlag;  else elseeditMaterialFlag">完成</a>
+      <ng-template #elseeditMaterialFlag><a href="javascript:;" class="edit" (click)="showEditMaterial(true)">编辑</a></ng-template>
+      关注的牌号 <span class="s">点击查看牌号</span>
+    <ul>
+
+      <li *ngFor="let material of materialList"><span class="delete" *ngIf="editMaterialFlag" (click)="deleteMaterial(material)" data-id="{{material.id}}"></span>{{material.name}}</li>
+
+      <li class="add"><a href="/center/wap_material_list?cateType=cateType">+添加牌号</a></li>
+    </ul>
+  </div>
+
+  <div class="price-list">
+    <div class="title">
+      <span class="on" data-type="2">市场价</span>
+      <span data-type="1">出厂价</span>
+      <input type="hidden" class="pageNo" value="1" />
+      <input type="hidden" class="cateType" value="${cateType}" />
+      <input type="hidden" class="sortName" value="" />
+      <input type="hidden" class="sortMode" value="" />
+    </div>
+    <table>
+      <thead>
+      <tr>
+        <th>名称</th>
+        <th>地区</th>
+        <th>价格</th>
+        <th class="vary-th">涨跌幅<i class="icon01"></i></th>
+        <th class="modifytime-th">时间<i class="icon02"></i></th>
+      </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+    <div class="no-more" style="display: none;"><i></i>&nbsp;&nbsp;&nbsp;&nbsp;没有更多了</div>
+    <div class="more-price-list" style="display: none;"><i></i>&nbsp;&nbsp;&nbsp;&nbsp;查看更多</div>
+    <div class="no-price-list" style="display: none;">
+      暂无数据
+    </div>
+  </div>
+
+  <div class="tip-for-booking" style="display: none;">
+    <div class="tip-wrapper">
+      <p class="p1">提示</p>
+      <p>您还未订阅<span class="cate-target"></span>品种，请先付费订阅</p>
+      <a href="/mobile/hq/order/confirm" class="go-booking">去订阅</a><button class="close">取消</button>
+    </div>
+  </div>
+</div>

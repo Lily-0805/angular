@@ -1,0 +1,68 @@
+.price-wrapper{ padding-bottom: 55px; }
+.price-wrapper .search{ position: relative; margin: 0 auto; padding: 0 70px 0 10px; width: 100%; height: 45px; background: #08d; box-sizing:border-box; z-index: 1; }
+.price-wrapper .search .channel{ position: absolute; top: 0; right: 0; }
+.price-wrapper .search .now-channel{ padding: 14px 13px 15px 0; float: right; width: 40px; height: 16px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 35px -100px; font-size: 14px; color: #fff;  }
+.price-wrapper .search .now-channel.open{ background-position: 35px -140px }
+.price-wrapper .search .search-input{ float: left; margin-top: 8px; padding-left: 30px; width: 100%; height: 30px; background: #fff url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 7px -75px; border-radius: 5px; font-size: 14px; box-sizing:border-box; color: #999; line-height: 30px; }
+.price-wrapper .search .more-channel{ position: fixed; top: 45px; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+.price-wrapper .search .more-channel p{ width: 100%; height: 44px; background: #fff; border-bottom: 1px solid #eee; line-height: 44px; font-size: 14px; }
+.price-wrapper .search .more-channel p span{ padding-left: 10px; display: inline-block; width: 100%; height: 44px; }
+.price-wrapper .search .more-channel p.on span{color: #e60a0a;}
+.price-wrapper .chart-box{ padding: 0 10px 10px; }
+.price-wrapper .chart-box .text{ padding: 10px; }
+.price-wrapper .chart-box .text .p1{ font-size: 30px; }
+.price-wrapper .chart-box .text .p1 .num{ font-size: 12px; vertical-align: top; line-height: 30px; }
+.price-wrapper .chart-box .text .time{ float: right; }
+.price-wrapper .chart-box .text .p2 .num{ margin-left: 5px; padding: 0 5px; height: 20px; background: #d6d6d6; border-radius: 2px; font-size: 10px; line-height: 20px; }
+.price-wrapper .chart-box .up .p1{ color: #fd5656; }
+.price-wrapper .chart-box .up .p2 .num{ background: #fdd; color: #fd5656; }
+.price-wrapper .chart-box .down .p1{ color: #1ebf60; }
+.price-wrapper .chart-box .down .p2 .num{ background: #d2f2df; color: #1ebf60; }
+.price-wrapper .chart-box .chart{ width: 100%; height: 300px; background: #fff; box-shadow: 0 0 10px #ddd; border-radius: 4px;}
+.price-wrapper .chart-box .chart-title{ padding: 10px 10px 0; width: 100%; height: 40px; border-bottom: 1px solid #eee; line-height: 30px; font-size: 14px; box-sizing:border-box;  }
+.price-wrapper .chart-box .chart-title span{ margin-top: 8px; float: right; padding: 0 8px; height: 14px; border-right: 1px solid #08d; line-height: 14px; font-size: 12px;}
+.price-wrapper .chart-box .chart-title span:nth-child(1){ border-right: 0; }
+.price-wrapper .chart-box .chart-title span.on{ color: #08d; }
+.price-wrapper .chart-box .point-target{ display: flex; margin: 0 10px; height: 30px; border-bottom: 1px solid #eee; line-height: 30px; justify-content: space-between; }
+.price-wrapper .chart-box .point-text{ margin: 0 10px; height: 30px; border-bottom: 1px solid #eee; line-height: 30px; text-align: center;}
+.price-wrapper .chart-box .point-target.up .num,.price-wrapper .chart-box .point-target.up .vary{ color: #fd5656; }
+.price-wrapper .chart-box .point-target.down .num,.price-wrapper .chart-box .point-target.down .vary{ color: #1ebf60; }
+.price-wrapper .chart-box .chart #container{ margin-top: 10px; width: 100%; height: 220px; }
+.price-wrapper .care-text{ padding: 0 10px 0 30px; height: 40px; background: #eee url(/resources/mobile/image/hq/price-icon.png) no-repeat 10px -28px; line-height: 40px; font-size: 14px; }
+.price-wrapper .care-text .s1{ float: right; padding-right: 20px; height: 40px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 66px -186px; color: #666; }
+.price-wrapper .care-text .s{ padding-left: 20px; color: #666; }
+.price-wrapper .price-list .title{ display: flex; width: 100%; height: 50px; justify-content: space-around; }
+.price-wrapper .price-list .title span{ padding: 0 5px; height: 49px; line-height: 49px; font-size: 14px; }
+.price-wrapper .price-list .title span.on{ border-bottom: 1px solid #08d; color: #08d; }
+.price-wrapper .price-list table{ width: 100%; border: 1px solid #ddd; }
+.price-wrapper .price-list th{ height: 50px; border-bottom: 1px solid #ddd; font-size: 14px; font-weight: normal; line-height: 50px; white-space: nowrap; }
+.price-wrapper .price-list th .icon01{ display: inline-block; width: 12px; height: 14px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 0 -510px; vertical-align: middle;}
+.price-wrapper .price-list th .icon02{ display: inline-block; width: 12px; height: 14px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 0 -540px; vertical-align: middle;}
+.price-wrapper .price-list th .icon01.up{ background-position: 0 -450px; }
+.price-wrapper .price-list th .icon01.down{ background-position: 0 -480px; }
+.price-wrapper .price-list th .icon02.on{ background-position: 0 -570px; }
+.price-wrapper .price-list td{ height: 25px; border-bottom: 1px solid #eee; vertical-align: middle; text-align: center; font-size: 14px; }
+.price-wrapper .price-list td.nobd{ padding-top: 5px; border-bottom: none; }
+.price-wrapper .price-list td.tr2{ padding-left: 10px; color: #999; font-size: 12px; text-align: left; }
+.price-wrapper .price-list .price-s.up{ color: #fd5656; }
+.price-wrapper .price-list .price-s.down{ color: #1ebf60; }
+.price-wrapper .price-list .place{position: relative; display: inline-block; padding: 0 13px 0 7px; height: 20px; border: 1px solid #08d; border-left: none; border-radius: 0 4px 4px 0; background: #fff; color: #08d; line-height: 20px; font-size: 10px; white-space: nowrap;}
+.price-wrapper .price-list .place:before{ content: ''; position: absolute; left: -6px; top: -1px; width: 6px; height: 22px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 0 -240px; }
+.price-wrapper .price-list .vary-s{ display: inline-block; padding: 0 8px; height: 30px; background: #d6d6d6; border-radius: 4px; line-height: 30px; }
+.price-wrapper .price-list .vary-s.up{ background: #fd5656; color: #fff; }
+.price-wrapper .price-list .vary-s.down{ background: #1ebf60; color: #fff; }
+.price-wrapper .price-list .no-see{ display: inline-block; width: 16px; height: 19px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 0 -300px; }
+.price-wrapper .price-list .no-more,.price-wrapper .price-list .more-price-list{ width: 100%; line-height: 50px; text-align: center; color: #666; }
+.price-wrapper .price-list .no-price-list{ padding-top: 50px; width: 100%; color: #999; font-size: 14px; text-align: center; }
+.price-wrapper .material-mask{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1; }
+.price-wrapper .edit-material{ position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; z-index: 1;}
+.price-wrapper .edit-material .p1{ padding-left: 40px; height: 50px; background: #08d; text-align: center; line-height: 50px; color: #fff; font-size: 18px; }
+.price-wrapper .edit-material .p1 .close{ padding: 22px 15px 21px 15px; float: right; width: 10px; height: 7px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 15px -100px;}
+.price-wrapper .edit-material .p2{ padding: 0 10px; font-size: 14px; line-height: 40px; }
+.price-wrapper .edit-material .p2 .edit,.price-wrapper .edit-material .p2 .close{margin-top: 10px; float: right; padding: 0 5px; height: 20px; border-radius: 2px; border: 1px solid #08d; color: #08d; line-height: 20px; }
+.price-wrapper .edit-material .p2 .s{ color: #999; font-size: 12px; }
+.price-wrapper .edit-material ul{ margin-bottom: 10px; width: 100%; display: flex; flex-wrap: wrap; overflow-y: auto; max-height: 200px; }
+.price-wrapper .edit-material li{ position: relative; margin: 10px 0 0 2.5%; float: left; display: flex; width: 30%; height: 35px; background: #08d; border-radius: 5px; text-align: center; color: #fff; font-size: 14px; justify-content: center; align-items: center; }
+.price-wrapper .edit-material li .delete{ position: absolute; top: -7px; right: -7px; width: 15px; height: 15px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 0 -340px; border-radius: 50%; }
+.price-wrapper .edit-material li a{ position: absolute; left: 0; top: 0; float: left; width: 100%; height: 100%; }
+.price-wrapper .edit-material li.add{ background: #eee; line-height: 35px; }

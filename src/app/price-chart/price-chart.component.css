@@ -1,0 +1,10 @@
+.chart{ width: 100%; height: 300px; background: #fff; box-shadow: 0 0 10px #ddd; border-radius: 4px;}
+.chart-title{ padding: 10px 10px 0; width: 100%; height: 40px; border-bottom: 1px solid #eee; line-height: 30px; font-size: 14px; box-sizing:border-box;  }
+.chart-title span{ margin-top: 8px; float: right; padding: 0 8px; height: 14px; border-right: 1px solid #08d; line-height: 14px; font-size: 12px;}
+.chart-title span:nth-child(1){ border-right: 0; }
+.chart-title span.on{ color: #08d; }
+.point-target{ display: flex; margin: 0 10px; height: 30px; border-bottom: 1px solid #eee; line-height: 30px; justify-content: space-between; }
+.point-text{ margin: 0 10px; height: 30px; border-bottom: 1px solid #eee; line-height: 30px; text-align: center;}
+.point-target.up .num,.point-target.up .vary{ color: #fd5656; }
+.point-target.down .num,.point-target.down .vary{ color: #1ebf60; }
+.chart #container{ margin-top: 10px; width: 100%; height: 220px; }

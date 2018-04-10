@@ -28,7 +28,7 @@
 .price-wrapper .chart-box .point-target.up .num,.price-wrapper .chart-box .point-target.up .vary{ color: #fd5656; }
 .price-wrapper .chart-box .point-target.down .num,.price-wrapper .chart-box .point-target.down .vary{ color: #1ebf60; }
 .price-wrapper .chart-box .chart #container{ margin-top: 10px; width: 100%; height: 220px; }
-.price-wrapper .care-text{ padding: 0 10px 0 30px; height: 40px; background: #eee url(/resources/mobile/image/hq/price-icon.png) no-repeat 10px -28px; line-height: 40px; font-size: 14px; }
+.price-wrapper .care-text{ padding: 0 10px 0 30px; height: 40px; background: #eee url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 10px -28px; line-height: 40px; font-size: 14px; }
 .price-wrapper .care-text .s1{ float: right; padding-right: 20px; height: 40px; background: url(http://www.zhaosuliao.com/resources/mobile/image/hq/price-icon.png) no-repeat 66px -186px; color: #666; }
 .price-wrapper .care-text .s{ padding-left: 20px; color: #666; }
 .price-wrapper .price-list .title{ display: flex; width: 100%; height: 50px; justify-content: space-around; }

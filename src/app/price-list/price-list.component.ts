@@ -19,9 +19,9 @@ export class PriceListComponent implements OnInit {
   moreCateType=false;
 
   price=6800;
-  vary=0;
-  modifyTime="11-27";
-  indexPrice=680;
+  vary="0";
+  modifyTime="6天前";
+  indexPrice="0.33%";
 
   isFollow=1;
   editMaterialMaskFlag=false;
@@ -30,6 +30,7 @@ export class PriceListComponent implements OnInit {
   materialList:Material[];
 
   priceList:Price[];
+  type=2;
 
 
 
@@ -37,7 +38,7 @@ export class PriceListComponent implements OnInit {
 
   ngOnInit() {
     this.getMaterialList();
-    this.getPriceList11();
+    this.getPriceList12();
   }
 
   //显示品种
@@ -58,16 +59,16 @@ export class PriceListComponent implements OnInit {
 
     if(this.cateTypeName=="PP"){
       this.price=7856;
-      this.vary=-100;
+      this.vary="-43";
       this.modifyTime="11-28";
-      this.indexPrice=756;
+      this.indexPrice="0.45%";
     }
 
     if(this.cateTypeName=="PVC"){
       this.price=5680;
-      this.vary=160;
+      this.vary="+30";
       this.modifyTime="11-29";
-      this.indexPrice=699;
+      this.indexPrice="0.65%";
     }
 
 
@@ -95,9 +96,22 @@ export class PriceListComponent implements OnInit {
     this.materialList = this.materialList.filter(m => m !== materialList);
   }
 
+  changeType(type):void{
+    this.type=type;
+    if(type==1){
+      this.getPriceList11();
+    }else{
+      this.getPriceList12();
+    }
+  }
+
   getPriceList11():void{
     this.allService.getNewsList()
       .subscribe(data => this.priceList = data['priceList11']);
+  }
+  getPriceList12():void{
+    this.allService.getNewsList()
+      .subscribe(data => this.priceList = data['priceList12']);
   }
 
 }

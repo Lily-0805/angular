@@ -60,14 +60,14 @@ export class PriceListComponent implements OnInit {
     if(this.cateTypeName=="PP"){
       this.price=7856;
       this.vary="-43";
-      this.modifyTime="11-28";
+      this.modifyTime="3天前";
       this.indexPrice="0.45%";
     }
 
     if(this.cateTypeName=="PVC"){
       this.price=5680;
       this.vary="+30";
-      this.modifyTime="11-29";
+      this.modifyTime="9天前";
       this.indexPrice="0.65%";
     }
 

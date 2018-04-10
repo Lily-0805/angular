@@ -12,6 +12,7 @@ import { FindPasswordComponent } from './find-password/find-password.component';
 
 import { AllServiceService } from './all-service.service';
 import { AppRoutingModule } from './/app-routing.module';
+import { PriceChartComponent } from './price-chart/price-chart.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './/app-routing.module';
     PriceListComponent,
     NewsDetailComponent,
     LoginComponent,
-    FindPasswordComponent
+    FindPasswordComponent,
+    PriceChartComponent
   ],
   imports: [
     BrowserModule,

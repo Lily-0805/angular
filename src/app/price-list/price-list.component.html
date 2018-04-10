@@ -62,8 +62,8 @@
 
   <div class="price-list">
     <div class="title">
-      <span class="on" data-type="2">市场价</span>
-      <span data-type="1">出厂价</span>
+      <span (click)="changeType(2)" [class.on]="type==2">市场价</span>
+      <span (click)="changeType(1)" [class.on]="type==1">出厂价</span>
       <input type="hidden" class="pageNo" value="1" />
       <input type="hidden" class="cateType" value="${cateType}" />
       <input type="hidden" class="sortName" value="" />
@@ -80,16 +80,19 @@
       </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let price of priceList" data-uri="/center/wap_price_detail?id={{price.id}}" data-catename="{{price.cateName}}">
+      <ng-template ngFor let-price [ngForOf]="priceList">
+        <tr>
           <td class="nobd"><b>{{price.material}}</b></td>
-          <td class="nobd">{{price.salesRegion}}</td>
-          <td rowspan="2" class="price-s">{{price.price}}</td>
-          <td rowspan="2">{{price.vary}}</td>
+          <td class="nobd" *ngIf="type==2">{{price.salesRegion}}</td>
+          <td class="nobd" *ngIf="type==1"><span class="place">{{price.salesRegion}}</span></td>
+          <td rowspan="2" class="price-s" [class.up]="price.vary>0" [class.down]="price.vary<0">{{price.price}}</td>
+          <td rowspan="2"><span class="vary-s" [class.up]="price.vary>0" [class.down]="price.vary<0">{{price.vary}}</span></td>
           <td rowspan="2">{{price.modifyTime}}</td>
         </tr>
-        <tr *ngFor="let price of priceList" data-uri="/center/wap_price_detail?id={{price.id}}">
+        <tr>
           <td colspan="2" class="tr2">{{price.cateName}} {{price.manufacturer}}</td>
         </tr>
+        </ng-template>
       </tbody>
     </table>
     <div class="no-more" style="display: none;"><i></i>&nbsp;&nbsp;&nbsp;&nbsp;没有更多了</div>

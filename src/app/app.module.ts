@@ -11,8 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { FindPasswordComponent } from './find-password/find-password.component';
 
 import { AllServiceService } from './all-service.service';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { PriceChartComponent } from './price-chart/price-chart.component';
+
+import { ChartModule } from "angular2-highcharts"
 
 
 @NgModule({
@@ -28,9 +30,10 @@ import { PriceChartComponent } from './price-chart/price-chart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartModule.forRoot(require('highcharts'))
   ],
-  providers: [AllServiceService],
+  providers: [AllServiceService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

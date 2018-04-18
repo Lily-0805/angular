@@ -1,4 +1,4 @@
-import { Component, OnInit,EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AllServiceService } from '../all-service.service';
 import { Material } from '../material'
 import { Price } from '../price'
